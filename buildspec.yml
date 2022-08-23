@@ -6,11 +6,10 @@ phases:
       java: corretto11
   pre_build:
     commands:
-      - mvn compile
-      - mvn test
+      - echo Nothing to do in the pre_build phase...
     commands:
       - echo Build started on `23/8/22`
-      - mvn package
+      - mvn install
   post_build:
     commands:
       - echo Build completed on `23/8/22`
