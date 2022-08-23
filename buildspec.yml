@@ -13,4 +13,4 @@ phases:
     commands:
     - echo Build completed on `23.08.22`
     - mvn package
-    - mv target/bike-service-0.0.1-SNAPSHOT.war bike-service-0.0.1-SNAPSHOT.war
+    
