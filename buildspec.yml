@@ -2,27 +2,18 @@ version: 0.2
 
 phases:
   install:
-    commands:
-      - apt-get update -y
-      - apt-get install -y software-properties-common
-      - add-apt-repository ppa:openjdk-r/ppa
-      - apt-get update -y
-      - apt-get install -y openjdk-8-jdk
-      - apt-get install -y maven
+    runtime-versions:
+      java: corretto11
   pre_build:
     commands:
-      - echo Logging in to Amazon ECR...
-     
+      - echo Nothing to do in the pre_build phase..
   build:
     commands:
-      - echo Build started on `date`
-      - echo Building the Docker image...
-      - mvn install
+      - echo Build started on `23/8/22`
   post_build:
     commands:
-      - echo Build completed on `date`
-      - echo Pushing the Docker image...
+      - echo Build completed on `23/8/22`
+      - mvn package
 artifacts:
-  type: zip
   paths:
-    - '*'
+     - /home/ubuntu/*.jar
