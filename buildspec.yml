@@ -10,10 +10,11 @@ phases:
   build:
     commands:
       - echo Build started on `23/8/22`
+      - ./gradlew bootJar
   post_build:
     commands:
       - echo Build completed on `23/8/22`
-      - mvn package
 artifacts:
+  type: zip
   paths:
-     - /home/ubuntu/*.jar
+    - '*'
