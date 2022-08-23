@@ -5,6 +5,6 @@ files:
   destination: /home/ubuntu/
 hooks:
 BeforeInstall:
-  - location: java.sh
+  - location: /home/ubuntu/java.sh
     timeout: 300
     runas: root
