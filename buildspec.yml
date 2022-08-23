@@ -4,16 +4,14 @@ phases:
   install:
     runtime-versions:
       java: corretto8
-  pre_build:
-    commands:
-      - echo Nothing to do in the pre_build phase..
   build:
     commands:
       - echo Build started on `23/8/22`
-      - mvn install
+      - mvn test
   post_build:
     commands:
       - echo Build completed on `23/8/22`
+      - mvn package
 artifacts:
   paths:
     - '*'
