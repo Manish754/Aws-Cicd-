@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
 - source: /
-  destination: /home/ubuntu
+  destination: /home/ubuntu/
 hooks:
-AfterInstall:
-  - location: restart.sh
+BeforeInstall:
+  - location: java.sh
     timeout: 300
     runas: root
