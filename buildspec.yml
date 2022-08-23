@@ -1,20 +1,16 @@
 version: 0.2
-
 phases:
   install:
     runtime-versions:
-      java: corretto17
+      java: corrett17
   pre_build:
     commands:
-      - echo Nothing to do in the pre_build phase..
+    - echo In the pre_build phase...
   build:
     commands:
-      - echo Build started on `23/8/22`
-      - sudo mvn install
+    - echo Build started on `23.08.22`
   post_build:
     commands:
-      - echo Build completed on `23/8/22`
-artifacts:
-  type: zip
-  paths:
-    - '*'
+    - echo Build completed on `23.08.22`
+    - mvn package
+    - mv target/bike-service-0.0.1-SNAPSHOT.war bike-service-0.0.1-SNAPSHOT.war
